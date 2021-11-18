@@ -9,7 +9,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	console.log(video.currentTime)
-	volume.innerText = '100%';
+	volume.innerText =  this.value + "%";
 });
 
 // progressively slower make it work later
