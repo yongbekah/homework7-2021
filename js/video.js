@@ -34,25 +34,25 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 // hope this is currect
 document.querySelector("#skip").addEventListener("click", function() {
-	console.log("Original location" + video.currentTime);
+	console.log("Original location:" + video.currentTime);
 	if (video.currentTime < 67.403333){
 	video.currentTime += 15;
 	}
 	else{
 	video.currentTime = 0;
 	}
-	console.log("New location" + video.currentTime);
+	console.log("New location:" + video.currentTime);
 
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted === false) {
 		video.muted = true;
-		mute.innerText = 'unmute';
+		mute.innerText = 'Unmute';
 	}
 	else {
 		video.muted = false;
-		mute.innerText = 'mute';
+		mute.innerText = 'Mute';
 	};
 });
 
@@ -60,7 +60,7 @@ document.querySelector("#slider").addEventListener("change", function() {
 	console.log('Before: ' + video.volume);
 	video.volume = this.value / 100;
 	console.log('After: ' + video.volume);
-	volume.innerText =  this.value + '%';
+	volume.innerText =  this.value + "%";
 });
 
 document.querySelector("#vintage").addEventListener("click", function() {
