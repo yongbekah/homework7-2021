@@ -9,7 +9,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	console.log(video.currentTime)
-	volume.innerText =  this.value + "%";
+	volume.innerText =  video.volume * 100 + "%";
 });
 
 // progressively slower make it work later
@@ -69,11 +69,17 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#slider").addEventListener("change", function() {
-	console.log('Before: ' + video.volume * 100 + "%");
-	video.volume = this.value / 100;
-	console.log('After: ' + video.volume * 100 + "%");
+	// video.volume = video.volume / 100;
+	console.log('After: ' + this.value + "%");
 	volume.innerText =  this.value + "%";
 });
+
+// document.querySelector("#slider").addEventListener("change", function() {
+// 	console.log('Before: ' + video.volume * 100 + "%");
+// 	video.volume = this.value / 100;
+// 	console.log('After: ' + video.volume * 100 + "%");
+// 	volume.innerText =  this.value + "%";
+// });
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	console.log('Oldschool');
